@@ -14,8 +14,8 @@ EXPOSE 9093
 COPY --from=builder /home/gradle/build/libs/*.jar /cv/cv.jar
 COPY --from=builder /home/gradle/docker-entrypoint.sh /cv/cv.sh
 
-ENV MARIADB_URI jdbc:mariadb://mariadb:3306/cv
-ENV MARIADB_USERNAME cv
-ENV MARIADB_PASSWORD cv
+ENV MYSQL_URI jdbc:mysql://mysql:3306/cv
+ENV MYSQL_USERNAME cv
+ENV MYSQL_PASSWORD cv
 
 ENTRYPOINT [ "/cv/cv.sh" ]

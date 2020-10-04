@@ -18,4 +18,4 @@ Or
 ## Technologies
 
 - Spring Boot
-- MariaDB
+- MySQL
