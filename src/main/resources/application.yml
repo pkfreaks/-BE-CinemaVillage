@@ -1,0 +1,28 @@
+server:
+  port: 9093
+  error:
+    path: /error
+
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/cv
+    username: cv
+    password: cv
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    default-property-inclusion: NON_NULL
+    property-naming-strategy: SNAKE_CASE
+
+logging:
+  level:
+    pl.edu.pk.freaks.cinemavillage: debug
