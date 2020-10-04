@@ -1,0 +1,4 @@
+1. Zainstakuj MySql Workbench
+2. Zainstaluj xampp
+3. Uruchom w xampie mysql
+4. Połącz się przy użyciu Mysql Workbencha do bazy MySql
