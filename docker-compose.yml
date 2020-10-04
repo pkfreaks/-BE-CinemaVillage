@@ -1,7 +1,7 @@
 version: "3"
 services:
-  mariadb:
-    image: mariadb:10.5.5-focal
+  mysql:
+    image: mysql:8.0.21
     restart: "no"
     environment:
       MYSQL_USER: cv
@@ -16,7 +16,7 @@ services:
     image: phpmyadmin/phpmyadmin:5.0.2
     restart: "no"
     environment:
-      PMA_HOST: mariadb
+      PMA_HOST: mysql
       PMA_PORT: 3306
       PMA_USER: root
       PMA_PASSWORD: root
